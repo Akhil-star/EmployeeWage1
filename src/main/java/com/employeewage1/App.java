@@ -8,13 +8,13 @@ public class App
 {
     public static void main( String[] args )
     {
-    	calDaily();
+    	addParttime();
     	
     }
     	
-    	public static void calDaily(){
+    	public static void addParttime(){
          	int wage;
-         	wage=20*8;
+         	wage=20*4;
          	System.out.println(wage);
          }
    
