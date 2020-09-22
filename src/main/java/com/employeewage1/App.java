@@ -9,13 +9,25 @@ public class App
     public static void main( String[] args )
     {
     	
-        calMonwage();
+        wageTotalDaily();
+        wageTotalPart();
     }
-    public static void calMonwage(){
-		int wage;
-		wage=20*8*20;
-		System.out.println(wage);
+     public static void wageTotalDaily(){
+		
+		int w = 0;
+		
+		for(int i=0;i<=20;i++){
+		  w=i*8*20;
+		}
+		System.out.println(w);
 	}
+     public static void wageTotalPart() {
+    	 int w=0;
+    	 for(int i=0;i<=100;i++) {
+    		 w=i*1*20;
+    	 }
+    	 System.out.println(w);
+     }
    
 }
 
