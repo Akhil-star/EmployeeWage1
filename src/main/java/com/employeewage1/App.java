@@ -6,29 +6,42 @@ import java.util.*;
  */
 public class App 
 {
+	public static final int IS_FULL_TIME=2;
+	public static final int IS_PART_TIME=1;
+	public static final int EMP_RATE_HOUR=20;
+	public static final int NUM_DAYS=2;
+	public static final int MAX_HRS=10;
+	
     public static void main( String[] args )
     {
     	
-        wageTotalDaily();
-        wageTotalPart();
+    	
+    	int empHrs=0;
+    	int totalHrs=0;
+    	int totalWage=0;
+    	int totalWorkingDays=0;
+    	
+    	while(totalHrs<=MAX_HRS && totalWorkingDays<NUM_DAYS) {
+    		totalWorkingDays++;
+    	int empCheck =(int) Math.floor(Math.random() *10)%3;
+    	switch(empCheck) {
+        case IS_FULL_TIME:
+    		empHrs=8;
+    		break;
+        case IS_PART_TIME:
+    		empHrs=4;
+    		break;
+    	default :
+    		empHrs=0;
+    		break;
     }
-     public static void wageTotalDaily(){
-		
-		int w = 0;
-		
-		for(int i=0;i<=20;i++){
-		  w=i*8*20;
-		}
-		System.out.println(w);
-	}
-     public static void wageTotalPart() {
-    	 int w=0;
-    	 for(int i=0;i<=100;i++) {
-    		 w=i*1*20;
-    	 }
-    	 System.out.println(w);
-     }
-   
+    	totalHrs += empHrs;
+    	System.out.println("Days: " +totalWorkingDays+ " Emp hr:" +empHrs);
+    } 
+    	totalWage=totalHrs*EMP_RATE_HOUR;
+	System.out.println("Total Emp Wage: " +totalWage);
+
+}
 }
 
 
