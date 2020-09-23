@@ -8,11 +8,11 @@ public class App
 {
     public static void main( String[] args )
     {
-        double value = Math.floor(Math.random() * 10)%2;
+    	int IS_FULL_TIME=1;
+        double empCheck = Math.floor(Math.random() * 10)%2;
 		
-    	System.out.println("Random value : "+value);
     			
-    	if(value == 1) {
+    	if(empCheck == IS_FULL_TIME) {
     	System.out.println("Employee present");
     	} else {
     	System.out.println("Employee absent");
